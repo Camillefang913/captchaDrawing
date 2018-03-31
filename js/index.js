@@ -19,7 +19,7 @@ window.onload= function(){
     }
 
 };
-// 使用橡皮擦清除画布内容
+// eraser
 function clearImg() {
         ogc.fillStyle="#fff";
         ogc.beginPath();
@@ -27,7 +27,7 @@ function clearImg() {
         ogc.closePath();
 }
 
-// 提交画布
+// submit canvas 
 function validation() {
     $('#c1').parent('div').append('<div style="width: 100%;height: 100%;background-color: #ddd;position: absolute;top: 0;left: 0;opacity: 0.4"></div>');
     $('.verifybtn>a>img').attr('src', 'img/button-submitting.png');
@@ -37,5 +37,5 @@ function validation() {
     var caxvas = document.getElementById('c1');
     var imgBase = caxvas.toDataURL("image/png");
     console.log(imgBase)
-    return imgBase;
+    return imgBase; // imgBase = 64base string for the png
 }
